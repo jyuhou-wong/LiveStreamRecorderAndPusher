@@ -1,0 +1,35 @@
+rpc:
+  enable: true
+  bind: 0.0.0.0:8080
+debug: true
+interval: 20
+out_put_path: /mnt/video/bililive-go
+ffmpeg_path: ""
+log:
+  out_put_folder: ./
+  save_last_log: true
+  save_every_log: false
+feature:
+  use_native_flv_parser: false
+  remove_symbol_other_character: false
+live_rooms:
+- url: https://www.douyu.com/92000?dyshid=0-cd40a5be2fbb603eb3c64de900061601&dyshci=350
+  listen: true
+  is_listening: true
+  record: false
+  is_recording: false
+  quality: 0
+  rtmp: rtmp://a.rtmp.youtube.com/live2/3tmg-5rup-va4y-xvz8-ap6k
+  push: true
+  is_pushing: false
+out_put_tmpl: ""
+video_split_strategies:
+  on_room_name_changed: false
+  max_duration: 0s
+  max_file_size: 0
+cookies: {}
+on_record_finished:
+  convert_to_mp4: false
+  delete_flv_after_convert: false
+  custom_commandline: ""
+timeout_in_us: 60000000
